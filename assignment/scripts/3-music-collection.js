@@ -54,7 +54,51 @@ function findByArtist(art) {
     }
     return results
 }
+//end findByArtist
 
+//testing findByArtist
+console.log('Testing FindByArtist:');
+console.log('expect Rocky Mountain High and Back Home Again');
 console.log(findByArtist('John Denver'));
+
+console.log('expect no result');
 console.log(findByArtist('Popcorn Shrimp'));
+
+console.log('expect Seven + Mary');
 console.log(findByArtist('Rainbow Kitten Surprise'));
+//end testing findByArtist
+
+
+//search
+function search(item) {
+    let results=[];
+    for (let i=0; i<collection.length; i++) {
+        if (collection[i].artist === item) {
+            results.push(collection[i]);
+        }
+        else if (collection[i].artist === item) {
+            results.push(collection[i])
+        }
+        else if (collection[i].yearPublished === item) {
+            results.push(collection[i]);
+        }
+    }
+    return results;
+}
+//end search
+
+//testing search
+console.log('Testing search');
+console.log('expect Rocky Moutain High');
+console.log(search(1972));
+
+console.log('expect Seven + Mary');
+console.log(search('Rainbow Kitten Surprise'));
+
+console.log('expect no result');
+console.log(search(2022));
+//end testing search
+
+console.log(collection);
+
+//I know that isn't fully done but it is an attempt at the start of something
