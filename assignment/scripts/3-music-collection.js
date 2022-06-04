@@ -2,6 +2,8 @@ console.log('***** Music Collection *****')
 
 let collection = [];
 
+//addToCollection
+
 function addToCollection (title , artist , yearPublished) {
     let newAlbum = {
         title ,
@@ -27,4 +29,15 @@ console.log('adding new album:' , addToCollection('maybe i will see you at the e
 
 console.log('current collection:' , collection);
 
+//end addToCollection
 
+//showCollection
+function showCollection (collectionToBeShown) {
+    console.log(collectionToBeShown.length);
+    for (let i=0; i<collectionToBeShown.length; i++){
+        console.log(collectionToBeShown[i].title + ' by ' +collectionToBeShown[i].artist);
+    }
+} 
+
+
+console.log(showCollection(collection));
